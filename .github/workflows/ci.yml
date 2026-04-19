@@ -1,8 +1,11 @@
 name: CI
 
 on:
+  push:
+    branches: [ main, dev ]
   pull_request:
     branches: [ main, dev ]
+  workflow_call:
 
 jobs:
   format-check:
